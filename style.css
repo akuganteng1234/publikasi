@@ -1,0 +1,368 @@
+* {
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-weight:700;
+    font-size: 30px;
+    margin: 0 0 16px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 0 0 16px ;
+    font-size: 15px ;
+}
+nav a { 
+    margin: 0 12px 0 0;
+}
+
+nav > a:hover {
+    color: white;
+    background-color: #ffc108;
+}
+
+
+p {
+    color: rgba(128, 128, 128, 0.6);
+    font-size: 15px;
+} 
+
+section {
+    padding: 10px 80px;
+}
+
+.btn {
+    background-color: rgba(255, 166, 0, 0.66);
+    padding: 8px 24px;
+    color: white;
+  
+}
+
+.btn-alt {
+    background-color: white;
+    color: black;
+    margin-right: 2em;
+    border: 1.5px rgba(255, 166, 0, 0.66) solid;
+  
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+
+}
+
+#header h1 {
+    margin: 0;
+    /* animation: flash 5s infinite; */
+    animation: bounceIn 2s infinite;
+}
+
+@keyframes bounceIn {
+    0% {
+        filter: opacity(0);
+        transform: translateY(-20px);
+    }
+    35% {
+        filter: opacity(0.25);
+        transform: translateY(0);
+    }
+    70% {
+        filter: opacity(0.5);
+        transform: translateY(-10px);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes flash {
+    from {
+        filter: opacity(0);
+    }
+    to {
+        filter: opacity(1);
+    }
+}
+
+#landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+#landing > div {
+    width: 50%;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px
+}
+
+#about > div {
+    width: 50% ;
+}
+
+#about-stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    margin-top: 50px;
+}
+
+#about-stats > div > div {
+    width: 60px;
+    height: 8px;
+    background-color: #ffc108;
+    text-align: center;
+    
+}
+
+.about-stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.service-header h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url(./images/accent1.svg);
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    z-index: -1;
+}
+.service-header h1 {
+    position: relative;
+}
+
+
+.service-detail {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 90px;
+    margin-top: 40px;
+}
+
+.service-detail-item {
+    box-shadow: 2px 4px 4px rgb(211, 207, 207);
+}
+.service-detail-item img {
+    width: 100%;
+}
+.service-detail-item h2 {
+    padding: 0 16px;
+}
+
+.service-detail-item p {
+    font-size: 12px;
+    padding: 0 16px;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    column-gap: 80px;
+}
+
+.contact-detail > div, .contact-detail > form {
+    width: 50%;
+}
+
+
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 30px;
+    margin-top: 30px;
+    grid-template-areas: "name subject"
+                         " email phone "
+                         "message message";
+}
+
+#input-name {
+    grid-area: name;
+}
+
+#input-subject {
+    grid-area: subject;
+}
+#input-email {
+    grid-area: email;
+}
+#input-phone {
+    grid-area: phone;
+}
+#input-message {
+    grid-area: message;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #ffc108;
+}
+
+
+.input-group input {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(234, 140, 9);
+}
+.input-group label {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+form button {
+    border: none;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border:  3px solid rgb(250, 191, 109);
+    padding: 30px 30px;
+}
+
+form h1 {
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 5px 80px;
+    background-color:rgb(250, 191, 109) ;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    width: 50%;
+}
+.social-icon {
+    display: flex;
+    gap: 30px;
+}
+
+#contact > h1 {
+    position: relative;
+    margin-top: 30px;
+}
+
+#contact > h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url(./images/accent2.svg);
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    z-index: -1;
+}
+@media only screen and (max-width: 1200px) {
+    .service-detail {
+        gap: 24px;
+    }
+
+    .contact-detail {
+        gap: 24px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    #header, footer{
+        padding: 16px 32px;
+    }
+    section {
+        padding: 64px 32px;
+    }
+
+    #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #landing > div {
+        width: 100%;
+    }
+    #about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+    }
+    #about > div {
+        width: 100%;
+    }
+
+    .service-detail {
+        gap: 30px;
+    }
+
+    .contact-detail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 30px ;
+    }
+    img, iframe {
+        width: 100%;
+    }
+    .contact-detail form, .contact-detail div {
+        width: 100%;
+    }
+}
+
+    
